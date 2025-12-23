@@ -1,0 +1,12 @@
+
+@startuml
+:equipment;
+:For each path to security and/or network assets;
+if (<b>Authentication mechanism property :</b>\nIs the authentication mechanism\nresilient against brute force attacks?) then (Yes)
+    #lightgreen :PASS\nIs resilient;
+    detach;
+else (No)
+    #pink :FAIL\nIs not resilient;
+    detach;
+endif
+@enduml

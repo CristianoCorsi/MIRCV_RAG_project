@@ -1,0 +1,21 @@
+@startuml
+:Equipment;
+if (Are network assets or security\nassets stored on the equipment?) then (Yes)
+    :For each network asset and security\nasset stored on the equipment;
+    if (Is the asset secured while\nstored on the equipment?) then (Yes)
+        #lightgreen :PASS\nAsset is protected;
+        detach;
+    else (No)
+        if (Is the asset stored on an equipment\nprotected by intended operational\nenvironment of use\nproviding physical or logical protection?) then (Yes)
+            #application :NOT APPLICABLE\nAsset protected\nby the intended environment of use;
+            detach;
+        else (No)
+            #pink :FAIL\nAsset not protected;
+            detach;
+        endif
+    endif
+else (No)
+    #application :NOT APPLICABLE\nNo assets stored;
+    detach;
+endif
+@enduml

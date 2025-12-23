@@ -1,0 +1,11 @@
+@startuml
+:equipment;
+:For each update mechanism for\nparts of the software affecting\nsecurity and/or network assets;
+if (<b>update mechanism property :</b>\nDoes the update mechanism\nonly install\nsoftware whose\nintegrity and authenticity\nis validated?) then (Yes)
+    #lightgreen :PASS\nUpdate secure;
+    detach;
+else (No)
+    #pink :FAIL\nUpdate not secure;
+    detach;
+endif
+@enduml

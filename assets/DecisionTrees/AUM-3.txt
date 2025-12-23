@@ -1,0 +1,11 @@
+@startuml
+:equipment;
+:For each path to security and network assets;
+if (<b>authentication mechanism property</b>:\nDoes the authentication mechanism\nvalidate all relevant properties\nconsidering the available information about the\nauthenticator in\nthe operational environments of use?) then (Yes)
+    #lightgreen :PASS\nAuthenticator validation\nis appropriate;
+    detach;
+else (No)
+    #pink :FAIL\nAuthenticator validation\nis inappropriate;
+    detach;
+endif
+@enduml

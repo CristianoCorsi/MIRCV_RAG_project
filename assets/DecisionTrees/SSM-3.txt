@@ -1,0 +1,13 @@
+@startuml
+:equipment;
+:For each secure storage mechanism;
+:For each operational state;
+if (Is the confidentiality of the assets sufficiently \nprotected to ensure that attacks
+on secure \nstorage do not lead to their disclosure?) then (Yes)
+  #lightgreen :PASS\nConfidentiality protected;
+  detach;
+else (No)
+  #pink :FAIL\nConfidentiality not protected;
+  detach;
+endif
+@enduml

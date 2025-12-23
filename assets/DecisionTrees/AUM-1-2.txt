@@ -1,0 +1,21 @@
+@startuml
+:equipment;
+:For each user interface;
+if (<b>Intended interface usage</b>:\nDoes the interface provide\naccess to network assets\nand/or security assets?) then (Yes)
+    if (<b>Intended environment</b>:\nDoes the intended operational\nenvironment of use\nprovide\nconfidence in the correctness\nof an entity's claim?) then (Yes)
+        #application :NOT APPLICABLE\nUsed in a secure\noperational\nenvironment;
+        detach
+    else (No)
+        if (<b>Interface property</b>:\nDoes the human\ninterface use an\nauthentication\nmechanism?) then (Yes)
+            #lightgreen :PASS;
+            detach
+        else (No)
+            #pink :FAIL\nApplicable but not met;
+            detach
+        endif
+    endif
+else (No)
+    #application :NOT APPLICABLE\nOut of scope;
+    detach
+endif
+@enduml

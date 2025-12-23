@@ -1,0 +1,27 @@
+@startuml
+
+:Equipment;
+if (Are security assets or network assets\ncommunicated over any network interface?) then (Yes)
+    :For every network interface communicating assets;
+    if (Are the assets secured while\ncommunicated over the interface?) then (Yes)
+        #lightgreen :PASS\nApplicable and met;
+        detach;
+    else (No)
+        if (Is the communication mechanism required\nto communicate with legacy networks or\ndevices?) then (Yes)
+            #application :NOT APPLICABLE\nRequired for legacy;
+            detach;
+        else (No)
+            if (Is the communication of assets protected\nby the environment providing physical\nor logical protection?) then (Yes)
+                #application :NOT APPLICABLE\nProtected by the environment;
+                detach;
+            else (No)
+                #pink :FAIL\nApplicable but not met;
+                detach;
+            endif
+        endif
+    endif
+else (No)
+    #application :NOT APPLICABLE\nNothing to protect;
+    detach;
+endif
+@enduml

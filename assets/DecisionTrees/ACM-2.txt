@@ -1,0 +1,11 @@
+@startuml
+:equipment;
+:For each security and network asset that\nis managed by access control mechanisms;
+if (<b>access control mechanism property :</b>\nDo the access control mechanisms\nensure that only authorized entities have access\nto the managed security and network asset?) then (Yes)
+    #lightgreen :PASS\nAccess control mechanisms\nare appropriate;
+    detach;
+else (No)
+    #pink :FAIL\nAccess control mechanisms\nare not appropriate;
+    detach;
+endif
+@enduml

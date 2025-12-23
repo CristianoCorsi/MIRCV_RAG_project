@@ -1,0 +1,38 @@
+@startuml
+
+:equipment;
+:For each external interface;
+if (Is the interface capable of receiving input?) then (Yes)
+  if (Is this a user interface?) then (\n\nYes)
+    if (Is the intended use and functionality \nof the user interface documented \nincluding any relevant input \ndata types supported?) then (Yes)
+      if (Is the syntactic and semantic \ncorrectness checked?) then (Yes)
+        #lightgreen :PASS\nInput validated;
+        detach;
+      else (No)
+        #pink :FAIL\nInput not validated;
+        detach;
+      endif
+    else (No)
+      #pink :FAIL\nDocumentation incomplete;
+      detach;
+    endif
+  else (No)
+    if (Is the intended use and functionality \nof the interface documented including \nany relevant input data types, APIs, \nprotocols, file formats, etc.?) then (Yes)
+      if (Is the syntactic and semantic \ncorrectness checked?) then (Yes)
+        #lightgreen :PASS\nInput validated;
+        detach;
+      else (No)
+        #pink :FAIL\nInput not validated;
+        detach;
+      endif
+    else (No)
+      #pink :FAIL\nDocumentation incomplete;
+      detach;
+    endif
+  endif
+else (No)
+  #application :NOT APPLICABLE\nInterface does not \nprocess input;
+  detach;
+endif
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+:equipment;
+:For each security and network asset;
+if (Is the full public accessibility of the asset the\n"equipment's reasonably foreseeable\nand\nintended use?) then (Yes)
+    #application :NOT APPLICABLE\nIntended use is fully\npublic;
+    detach;
+else (No)
+    if (Does the "foreseeable and intended\noperational environment of use" ensure\nthat\naccessibility to the asset is limited\nto authorized entities?) then (Yes)
+        #application :NOT APPLICABLE\nIntended environment\nprotects the asset;
+        detach;
+    else (No)
+        if (<b>access control mechanism property :</b>\nAre there access control\nmechanisms that\nmanage entities access to the security\nand network asset?) then (Yes)
+            #lightgreen :PASS\nAccess control\nmechanism needed\nand present;
+            detach;
+        else (No)
+            #pink :FAIL\nAccess control\nmechanism needed\nbut not present;
+            detach;
+        endif
+    endif
+endif
+@enduml

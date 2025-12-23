@@ -1,0 +1,12 @@
+@startuml
+:equipment;
+:For each secure communication mechanism;
+:For each operational state;
+if (Is the confidentiality of the assets sufficiently\nprotected to ensure that attacks\non secure communication sessions do not lead\nto their disclosure?) then (Yes)
+    #lightgreen :PASS;
+    detach;
+else (No)
+    #pink :FAIL;
+    detach;
+endif
+@enduml

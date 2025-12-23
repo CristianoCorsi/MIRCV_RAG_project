@@ -1,0 +1,12 @@
+@startuml
+:equipment;
+:For each secure storage mechanism;
+:For each operational state;
+if (Is the integrity of the assets sufficiently \nprotected to ensure that attacks on secure \nstorage do not lead to their manipulation?) then (Yes)
+  #lightgreen :PASS\nIntegrity protected;
+  detach;
+else (No)
+  #pink :FAIL\nIntegrity not protected;
+  detach;
+endif
+@enduml
