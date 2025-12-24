@@ -1,0 +1,26 @@
+
+
+@startuml
+
+:Equipment;
+:For each network interface;
+
+if ("Is the network interface intended to be\nused to communicate with other\nequipment in a local network only?") then (Yes, local network only)
+  #application: NOT APPLICABLE\ncondition for the network interface;
+  detach
+else (No)
+  if ("Does equipment in the network provide\nsufficient protection against loss of\nfunction of the equipment?") then (Yes, resources in the network)
+    #application: NOT APPLICABLE\ncondition for the network interface;
+    detach
+  else (No)
+    if ("Does the equipment use resilience\nmechanisms to mitigate the effects of\nDoS Attacks on the network interfaces\nand return to a defined state after attack?") then (Yes)
+      #lightgreen: PASS for network interface:\napplicable and met;
+      detach
+    else (No)
+      #pink: FAIL for network interface:\nApplicable but not met;
+      detach
+    endif
+  endif
+endif
+
+@enduml

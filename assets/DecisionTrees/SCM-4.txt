@@ -1,0 +1,17 @@
+@startuml
+:equipment;
+: For each secure communication mechanism;
+:For each operational state;
+if (Does the duplicate transfer of an asset \npose a threat of a replay attack?) then (Yes)
+  if (Is the transfer of the asset information \nprotected against replay attacks?) then (Yes)
+    #lightgreen :PASS\nProtected;
+    detach;
+  else (No)
+    #pink :FAIL\nNot protected;
+    detach;
+  endif
+else (No)
+  #application :NOT APPLICABLE \nRisk does not exist;
+  detach;
+endif
+@enduml

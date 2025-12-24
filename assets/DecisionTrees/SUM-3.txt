@@ -1,0 +1,27 @@
+@startuml
+
+:equipment;
+
+if ("<b>Equipment property :</b>\nDoes the equipment have a network interface\nthat allows transferring an update?") then (Yes)
+    :For each updatable part of the software\naffecting security and/or network assets;
+    if ("<b>Functional safety implications :</b>\nAre there functional safety implications, that do not allow the\nautomation of updating this part of the software?") then (Yes)
+        #application: NOT APPLICABLE\nFunctional safety implications prohibit automation;
+        detach;
+    else (No)
+        switch ("<b>Update mechanism property :</b>\nIs there at least one update mechanism for the software\nthat is capable of updating the part of software:\n - without human intervention at the equipment; or\n - via scheduling or triggering the installation of an update under user approval?")
+            case ("Yes, without intervention")
+                #lightgreen: PASS\nUpdateable without intervention;
+                detach;
+            case ("Yes, via notification prompt")
+                #lightgreen: PASS\nUpdateable via notification;
+                detach;
+            case ("No")
+                #pink: FAIL\nNot updateable as required;
+                detach;
+        endswitch
+    endif
+else (No)
+    #application: NOT APPLICABLE\nTechnical capabilities for automated updates not present;
+    detach;
+endif
+@enduml

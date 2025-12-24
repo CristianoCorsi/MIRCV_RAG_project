@@ -1,0 +1,24 @@
+@startuml
+
+:equipment;
+:For each confidential cryptographic key;
+
+if ("Is this CCK used for protecting\none or several network\nand/or security assets?") then (Yes)
+  if ("Does the equipment enforce\nthe generation of this CCK on first use?") then (Yes)
+    #application: NOT APPLICABLE\ncondition for requirement's\napplicability not met for this CCK;
+    detach;
+  else (No)
+    switch ("Is this CCK practically unique per unit?")
+      case ("Yes")
+        #lightgreen: PASS;
+        detach;
+      case ("No")
+        #pink: FAIL;
+        detach;
+    endswitch
+  endif
+else (No)
+  #application: NOT APPLICABLE\ncondition for requirement's\napplicability not met for this CCK;
+  detach;
+endif
+@enduml

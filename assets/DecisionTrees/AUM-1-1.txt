@@ -1,0 +1,26 @@
+@startuml
+:equipment;
+:For each network interface;
+if (<b>Intended interface use</b>:\nDoes the interface provide \naccess to network assets\nor security assets?) then (Yes)
+  if (<b>Intended environment</b>:\nIs the equipment logically \nor physically separated\nfrom untrusted networks?) then (Yes)
+    #application :NOT APPLICABLE\nUsed in a\nprotected\nenvironment;
+    detach
+  else (No)
+    if (<b>Interface property</b>:\nDoes the interface require\nthe absence of authentication\nin order to fulfill its intended use?) then (Yes)
+      #application :NOT APPLICABLE\nAbsence of\nauthentication\nrequired;
+      detach
+    else (No)
+      if (<b>Interface property</b>:\nDoes the interface use an\nauthentication mechanism?) then (Yes)
+        #lightgreen :PASS;
+        detach
+      else (No)
+        #pink :FAIL\nApplicable but not met;
+        detach
+      endif
+    endif
+  endif
+else (No)
+  #application :NOT APPLICABLE\nOut of scope;
+  detach
+endif
+@enduml

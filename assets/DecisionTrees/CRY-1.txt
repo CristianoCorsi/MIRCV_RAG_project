@@ -1,0 +1,19 @@
+@startuml
+
+:equipment;
+:For each security and network asset;
+if (Does the equipment use cryptography\nfor the protection of the security or\nnetwork asset?) then (No)
+    #application :NOT APPLICABLE\nCryptography not used for protection;
+    detach;
+else (Yes)
+    : For each cryptographic protection of the security or network asset;
+    :For each cryptography used for cryptographic protection;
+    if (Is the cryptography best practices\nconcerning the protection of the\nsecurity asset or network asset?) then (No)
+        #pink :FAIL\nCryptography is not best practice;
+        detach;
+    else (Yes)
+        #lightgreen :PASS\nCryptography is best practice;
+        detach;
+    endif
+endif
+@enduml

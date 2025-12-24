@@ -1,0 +1,13 @@
+@startuml
+:equipment;
+:For each secure communication mechanism;
+:For each operational state;
+if (Is the integrity and authenticity of the assets \nsufficiently protected to ensure
+that attacks \non secure communication sessions do not \nlead to their manipulation?) then (Yes)
+  #lightgreen :PASS;
+  detach;
+else (No)
+  #pink :FAIL;
+  detach;
+endif
+@enduml

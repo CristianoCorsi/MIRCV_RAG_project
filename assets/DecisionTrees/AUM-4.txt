@@ -1,0 +1,16 @@
+@startuml
+:equipment;
+:For each path to security and/or network assets;
+if (<b>Equipment security concept :</b>\nDoes the change of the authenticator\nconflict with security goals?) then (Yes)
+  #application: NOT APPLICABLE\nStatic for security reasons;
+  detach;
+else (No)
+  if (<b>Authentication mechanism property :</b>\nDoes the authentication mechanism\nallow the change of the authenticator?) then (Yes)
+    #lightgreen :PASS\nAuthenticator changeable;
+    detach;
+  else (No)
+    #pink :FAIL\nAuthenticator not changeable;
+    detach;
+  endif
+endif
+@enduml

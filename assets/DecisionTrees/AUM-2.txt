@@ -1,0 +1,11 @@
+@startuml
+:equipment;
+:For each access to security and/or network assets;
+if (<b>authentication mechanism property :</b>\nDoes at least one authentication\nmechanism on the path use\nat least one factor authentication to verify an entities'\nclaim?) then (Yes)
+    #lightgreen :PASS\nAuthentication mechanisms\nare appropriate;
+    detach;
+else (No)
+    #pink :FAIL\nAuthentication mechanisms\nare not appropriate;
+    detach;
+endif
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+:equipment;
+:For each part of the equipment's software;
+if (<b>software part property :</b>\nDoes the part of the software affect security and/or\nnetwork assets?) then (Yes)
+    if (Do functional safety implications prohibit updatability?) then (Yes)
+        #application :NOT APPLICABLE\nFunctional safety implications;
+        detach;
+    else (No)
+        if (Is the software immutable for security reasons?) then (Yes)
+            #application :NOT APPLICABLE\nImmutable for security;
+            detach;
+        else (No)
+            if (Do alternative measures exist that protect security\nassets and/or network\nassets during the entire lifecycle?) then (Yes)
+                #application :NOT APPLICABLE\nAlternative measures;
+                detach;
+            else (No)
+                if (<b>software part property :</b>\nDoes the equipment provide at least\none update\nmechanism for updating\nthe part of the software?) then (No)
+                    #pink :FAIL\nSoftware is not updatable;
+                    detach;
+                else (Yes)
+                    #lightgreen :PASS\nSoftware is updatable;
+                    detach;
+                endif
+            endif
+        endif
+    endif
+else
+    #application :NOT APPLICABLE\nSoftware does not affect asset;
+    detach;
+endif
+@enduml

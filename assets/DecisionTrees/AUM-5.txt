@@ -1,0 +1,26 @@
+@startuml
+:equipment;
+if (<b>Equipment property :</b>\nAre passwords used?) then (Yes)
+    :For each path to security and network assets;
+    if (<b>Password property :</b>\nIs the password practically \nunique per equipment\nin factory default?) then (Yes)
+        #lightgreen :PASS\nPassword is \npractically unique;
+        detach;
+    else (No)
+        if (<b>Operational environment :</b>\nEquipment is logically \nor physically separated\nfrom untrusted networks?) then (No)
+            #pink :FAIL\nInappropriate \nenvironment;
+            detach;
+        else (Yes)
+            if (<b>AuthMech property :</b>\nIs setting a new \npassword enforced \non first use?) then (Yes)
+                #lightgreen :PASS\nSetting of a \nnew password is \nenforced on first use;
+                detach;
+            else (No)
+                #pink :FAIL\nSetting of a \nnew password is \nenforced on first use;
+                detach;
+            endif
+        endif
+    endif
+else (No)
+    #application:NOT APPLICABLE\nNo passwords used;
+    detach;
+endif
+@enduml

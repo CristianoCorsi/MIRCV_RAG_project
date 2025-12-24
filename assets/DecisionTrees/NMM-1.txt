@@ -1,0 +1,20 @@
+@startuml
+:equipment;
+if (Is the equipment a\nNetwork Equipment?) then (Yes)
+    if (Is the Network Equipment intended to\nconnect other equipment to a public network?) then (No)
+        #application :NOT APPLICABLE\ncondition for\nnon-applicability met;
+        detach;
+    else (Yes)
+        if (Does the Network Equipment provide a network monitoring mechanism) then (No)
+            #pink :FAIL\napplicable but not met;
+            detach;
+        else (Yes)
+            #lightgreen :PASS\napplicable and met;
+            detach;
+        endif
+    endif
+else (No)
+    #application :NOT APPLICABLE\ncondition for requirement's\napplicability not met;
+    detach;
+endif
+@enduml
