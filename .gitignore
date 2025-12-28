@@ -12,6 +12,7 @@ __pycache__/
 
 # Environments
 .env
+.agent/
 .venv/
 env/
 venv/
