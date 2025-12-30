@@ -12,6 +12,7 @@ __pycache__/
 
 # Environments
 .env
+.agent/
 .venv/
 env/
 venv/
@@ -24,4 +25,4 @@ Thumbs.db
 
 temp/
 tools/
-figures/
+cache/
