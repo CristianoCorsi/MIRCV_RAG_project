@@ -1,3 +1,5 @@
 *.ipynb filter=nbstripout
 *.ipynb diff=jupyternotebook
 *.ipynb merge=jupyternotebook
+* text=auto eol=lf
+*.ipynb text eol=lf
