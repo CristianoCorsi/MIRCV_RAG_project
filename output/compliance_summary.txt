@@ -5,27 +5,27 @@ Document: ./assets/ProductDescription.pdf
 Trees evaluated: 25
 
 Tree: ACM-1
-  Status: COMPLETED
-  Final Verdict: NOT APPLICABLE: NOT APPLICABLE Intended environment protects the asset;
+  Status: STOPPED
+  Final Verdict: NOT APPLICABLE
   Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: ACM-2
   Status: STOPPED
-  Final Verdict: INSUFFICIENT INFO
+  Final Verdict: NOT APPLICABLE
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-1-1
   Status: STOPPED
-  Final Verdict: INSUFFICIENT INFO
+  Final Verdict: NOT APPLICABLE
   Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: AUM-1-2
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-2
@@ -79,7 +79,7 @@ Tree: GEC-7
 Tree: NMM-1
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Nodes Evaluated: 3
 --------------------------------------------------------------------------------
 
 Tree: RLM-1
@@ -95,14 +95,14 @@ Tree: SCM-1
 --------------------------------------------------------------------------------
 
 Tree: SCM-2
-  Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Status: COMPLETED
+  Final Verdict: FAIL: FAIL;
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SCM-3
-  Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Status: COMPLETED
+  Final Verdict: FAIL: FAIL;
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -119,8 +119,8 @@ Tree: SSM-1
 --------------------------------------------------------------------------------
 
 Tree: SSM-2
-  Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Status: COMPLETED
+  Final Verdict: FAIL: FAIL Integrity not protected;
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -151,6 +151,6 @@ Tree: SUM-3
 Tree: TCM-1
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Nodes Evaluated: 3
 --------------------------------------------------------------------------------
 
