@@ -5,21 +5,21 @@ Document: ./assets/ProductDescription.pdf
 Trees evaluated: 25
 
 Tree: ACM-1
-  Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Status: COMPLETED
+  Final Verdict: NOT APPLICABLE: NOT APPLICABLE Intended environment protects the asset;
   Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: ACM-2
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-1-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 1
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: AUM-1-2
@@ -54,14 +54,14 @@ Tree: AUM-5
 
 Tree: AUM-6
   Status: STOPPED
-  Final Verdict: INSUFFICIENT INFO
+  Final Verdict: NOT APPLICABLE
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: CCK-4
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: CRY-1
@@ -79,13 +79,13 @@ Tree: GEC-7
 Tree: NMM-1
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 3
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: RLM-1
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SCM-1
@@ -95,8 +95,8 @@ Tree: SCM-1
 --------------------------------------------------------------------------------
 
 Tree: SCM-2
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL;
+  Status: STOPPED
+  Final Verdict: NOT APPLICABLE
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -115,12 +115,12 @@ Tree: SCM-4
 Tree: SSM-1
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SSM-2
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL Integrity not protected;
+  Status: STOPPED
+  Final Verdict: NOT APPLICABLE
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -132,7 +132,7 @@ Tree: SSM-3
 
 Tree: SUM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -145,12 +145,12 @@ Tree: SUM-2
 Tree: SUM-3
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 1
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: TCM-1
   Status: STOPPED
   Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 3
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
