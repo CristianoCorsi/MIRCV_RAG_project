@@ -7,12 +7,12 @@ Trees evaluated: 25
 Tree: ACM-1
   Status: STOPPED
   Final Verdict: INSUFFICIENT INFO
-  Nodes Evaluated: 2
+  Nodes Evaluated: 3
 --------------------------------------------------------------------------------
 
 Tree: ACM-2
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL Access control mechanisms are not appropriate;
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -41,9 +41,9 @@ Tree: AUM-3
 --------------------------------------------------------------------------------
 
 Tree: AUM-4
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL Authenticator not changeable;
-  Nodes Evaluated: 2
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-5
@@ -60,13 +60,13 @@ Tree: AUM-6
 
 Tree: CCK-4
   Status: COMPLETED
-  Final Verdict: PASS: PASS;
-  Nodes Evaluated: 3
+  Final Verdict: NOT APPLICABLE: NOT APPLICABLE condition for requirement's applicability not met for this CCK;
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: CRY-1
-  Status: STOPPED
-  Final Verdict: INSUFFICIENT INFO
+  Status: COMPLETED
+  Final Verdict: NOT APPLICABLE: NOT APPLICABLE Cryptography not used for protection;
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -77,15 +77,15 @@ Tree: GEC-7
 --------------------------------------------------------------------------------
 
 Tree: NMM-1
-  Status: STOPPED
-  Final Verdict: INSUFFICIENT INFO
+  Status: COMPLETED
+  Final Verdict: NOT APPLICABLE: NOT APPLICABLE condition for non-applicability met;
   Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: RLM-1
   Status: COMPLETED
-  Final Verdict: NOT APPLICABLE: NOT APPLICABLE condition for the network interface;
-  Nodes Evaluated: 1
+  Final Verdict: FAIL: FAIL for network interface: Applicable but not met;
+  Nodes Evaluated: 3
 --------------------------------------------------------------------------------
 
 Tree: SCM-1
@@ -101,8 +101,8 @@ Tree: SCM-2
 --------------------------------------------------------------------------------
 
 Tree: SCM-3
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL;
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -119,8 +119,8 @@ Tree: SSM-1
 --------------------------------------------------------------------------------
 
 Tree: SSM-2
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL Integrity not protected;
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -150,7 +150,7 @@ Tree: SUM-3
 
 Tree: TCM-1
   Status: COMPLETED
-  Final Verdict: FAIL: FAIL applicable but not met;
-  Nodes Evaluated: 3
+  Final Verdict: NOT APPLICABLE: NOT APPLICABLE condition for non-applicability met;
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
