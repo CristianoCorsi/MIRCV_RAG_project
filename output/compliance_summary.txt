@@ -6,37 +6,37 @@ Trees evaluated: 25
 
 Tree: ACM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: ACM-2
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-1-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 2
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-1-2
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-2
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-3
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -47,86 +47,86 @@ Tree: AUM-4
 --------------------------------------------------------------------------------
 
 Tree: AUM-5
-  Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Status: COMPLETED
+  Final Verdict: NOT APPLICABLE: NOT APPLICABLE No passwords used;
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: AUM-6
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: CCK-4
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: CRY-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: GEC-7
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 3
 --------------------------------------------------------------------------------
 
 Tree: NMM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 3
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: RLM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 1
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: SCM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: SCM-2
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL;
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SCM-3
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL;
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SCM-4
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SSM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SSM-2
-  Status: COMPLETED
-  Final Verdict: FAIL: FAIL Integrity not protected;
+  Status: STOPPED
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SSM-3
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
@@ -138,19 +138,19 @@ Tree: SUM-1
 
 Tree: SUM-2
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 1
 --------------------------------------------------------------------------------
 
 Tree: SUM-3
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
+  Final Verdict: INSUFFICIENT INFO
   Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
 Tree: TCM-1
   Status: STOPPED
-  Final Verdict: NOT APPLICABLE
-  Nodes Evaluated: 3
+  Final Verdict: INSUFFICIENT INFO
+  Nodes Evaluated: 2
 --------------------------------------------------------------------------------
 
