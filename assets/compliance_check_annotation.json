@@ -1,0 +1,721 @@
+{
+  "ACM-1": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 3,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each security and network asset",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+            "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This establishes that the equipment includes network interfaces and therefore has security and network assets in scope."
+          ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the full public accessibility of the asset the \"equipment's reasonably foreseeable and intended use?\"",
+        "evaluation": {
+          "response": "NO",
+          "reasoning":[
+            "\"The CC3200 LaunchPad development kit is a low-cost evaluation platform for Arm Cortex-M4F-based microcontrollers.\" The asset is described as an evaluation platform and development kit, which indicates it is intended for testing and development activities rather than open public use.",
+            "\"Created for the Internet of Things (IoT), the SimpleLink WiFi CC3200 device is a wireless MCU that integrates a high-performance Arm® Cortex®-M4 MCU allowing customers to develop an entire application with a single IC\" The focus on application development shows that the asset is meant to be used by developers during design and build phases, rather than being openly accessible to the public in operation.",
+            "\"CC3200 LaunchPad development kit\" Classifying the equipment as a development kit signals that it is a tool for developers, not a deployed system intended for public interaction.",
+            "\"These resources are intended for skilled developers designing with TI products.\" By explicitly limiting the intended users to skilled developers, the documentation implies controlled access and excludes full public accessibility as an intended use."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Does the \"foreseeable and intended operational environment of use\" ensure that accessibility to the asset is limited to authorized entities?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not define any operational environment constraints that restrict access to the asset. No physical, procedural, or technical controls limiting access to authorized entities are described.In compliance assessment, the absence of stated access restrictions implies that the operational environment does not ensure controlled accessibility."
+          ]       
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Are there access control mechanisms that manage entities access to the security and network asset?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any access control mechanisms that manage or enforce which entities may access the asset. No authentication, authorization, identity management, or permission enforcement mechanisms are specified. Hardware features such as jumpers, headers, UART, or JTAG are described only as configuration or connectivity options, not as access control mechanisms. In compliance assessment, the absence of documented access control mechanisms indicates that required controls are not present."
+          ]
+        }
+      }
+    ]
+  },
+  "ACM-2": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 0,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each security and network asset that is managed by access control mechanisms",
+        "applicability": "NOT_APPLICABLE",
+        "reasoning": [
+          "The documentation does not describe any access control mechanisms such as authentication, authorization, identity management, or permission enforcement that manage access to security and network assets. Because no access control mechanisms are documented, there are no security and network assets that are managed by access control mechanisms within the scope of this requirement."
+        ]
+      }
+    ]
+  },
+  "AUM-1-1": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 4,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each network interface",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" The documentation explicitly states that the equipment includes a Wi-Fi interface, which is a network interface within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Intended interface use</b>: Does the interface provide access to network assets or security assets?",
+        "evaluation": {
+          "response": "YES",
+          "reasoning": [
+            "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" and \"Created for the Internet of Things (IoT), the SimpleLink™ Wi-Fi CC3200 device is a wireless MCU.\" These statements explicitly describe a wireless network interface that enables network connectivity, which provides access to network and security assets."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Intended environment</b>: Is the equipment logically or physically separated from untrusted networks?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation describes the device as a wireless IoT MCU but does not state that it is logically or physically separated from untrusted networks. No protected or isolated operational environment is explicitly described."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Interface property</b> Does the interface require the absence of authentication in order to fulfill its intended use?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not state that the network interface must operate without authentication in order to fulfill its intended use. No requirement for the absence of authentication is explicitly documented."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Interface property</b>: Does the interface use an authentication mechanism?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "While the documentation references \"robust security protocols,\" it does not explicitly describe any authentication mechanisms used by the network interface, nor does it explain how entities are authenticated prior to access. Therefore, there is no explicit evidence that the interface uses an authentication mechanism."
+          ]
+        }
+      }
+    ]
+  },
+  "AUM-1-2": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 3,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each user interface",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The CC3200 LaunchPad development kit\" and references to user interaction for development indicate that the equipment exposes user interfaces. Therefore, at least one user interface exists and is within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Intended interface usage</b>: Does the interface provide access to network assets and/or security assets?",
+        "evaluation": {
+          "response": "YES",
+          "reasoning": [
+            "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" and \"Created for the Internet of Things (IoT), the SimpleLink™ Wi-Fi CC3200 device is a wireless MCU.\" These statements establish that interaction with the device provides access to network-connected functionality and associated network and security assets."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Intended environment</b>: Does the intended operational environment of use provide confidence in the correctness of an entity's claim?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any operational environment assumptions, controls, or guarantees that provide confidence in the correctness of an entity’s identity or claims. No trusted, controlled, or verified environment is explicitly stated."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Interface property</b>: Does the human interface use an authentication mechanism?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any authentication mechanisms associated with a human interface. While general security protocols are mentioned, there is no explicit description of user authentication, identity verification, or access enforcement for human interaction with the interface."
+          ]
+        }
+      }
+    ]
+  },
+  "AUM-2": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each access to security and/or network assets",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents that the equipment provides network connectivity, which establishes the existence of access paths to network and associated security assets within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>authentication mechanism property :</b> Does at least one authentication mechanism on the path use at least one factor authentication to verify an entities' claim?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any authentication mechanisms on the access path to security or network assets. Although general references to \"robust security protocols\" are made, no authentication factors such as passwords, cryptographic keys, certificates, tokens, or biometrics are explicitly documented. Therefore, there is no evidence that any authentication mechanism using at least one authentication factor is implemented."
+          ]
+        }
+      }
+    ]
+  },
+  "AUM-3": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each path to security and network assets",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents network connectivity, which establishes the existence of paths to network and associated security assets within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>authentication mechanism property:</b> Does the authentication mechanism validate all relevant properties considering the available information about the authenticator in the operational environments of use?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any authentication mechanism or authenticator used on paths to security or network assets. It also does not specify any validation of relevant properties such as identity, integrity, freshness, or contextual binding based on operational environment information. In the absence of any documented authentication mechanism or validation process, there is no evidence that all relevant properties are validated."
+          ]
+        }
+      }
+    ]
+  },
+  "AUM-4": {
+    "status": "STOPPED",
+    "final_verdict": "INSUFFICIENT INFO",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each path to security and/or network assets",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents network connectivity, which establishes the existence of paths to network and associated security assets within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Equipment security concept :</b> Does the change of the authenticator conflict with security goals?",
+        "evaluation": {
+          "response": "INSUFFICIENT INFO",
+          "reasoning": [
+            "The documentation does not define any authenticator, does not describe any change of an authenticator, and does not state any security goals for the equipment. Because the existence of an authenticator, the nature of a change, and the relevant security goals are all undefined, there is insufficient information to determine whether a change of the authenticator would conflict with security goals."
+          ]
+        }
+      }
+    ]
+  },
+  "AUM-5": {
+    "status": "COMPLETED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "decision",
+        "node_text": "<b>Equipment property :</b> Are passwords used?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not mention the use of passwords, password-based authentication, default passwords, or password configuration mechanisms. While general references to \"robust security protocols\" are made, there is no explicit evidence that passwords are used by the equipment. Because passwords are not documented as being used, the password-specific requirements in this decision tree are not applicable."
+          ]
+        }
+      }
+    ]
+  },
+  "AUM-6": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each path to security and/or network assets",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents network connectivity, which establishes the existence of paths to network and associated security assets within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Authentication mechanism property :</b> Is the authentication mechanism resilient against brute force attacks?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any authentication mechanism used on paths to security or network assets. It also does not document any protections such as rate limiting, retry limits, lockout, backoff, throttling, or other controls that would provide resilience against brute force attacks. In the absence of explicit evidence of such protections, the requirement that the authentication mechanism is resilient against brute force attacks is not satisfied."
+          ]
+        }
+      }
+    ]
+  },  
+  "CCK-4": {
+  "status": "STOPPED",
+  "final_verdict": "NOT APPLICABLE",
+  "num_nodes_evaluated": 0,
+  "path_taken": [
+    {
+      "node_type": "action",
+      "node_text": "For each confidential cryptographic key",
+      "applicability": "NOT_APPLICABLE",
+      "reasoning": [
+        "The documentation does not identify or describe any confidential cryptographic key used by the equipment. No keys are explicitly documented as being generated, stored, or used for protecting network or security assets. Because no confidential cryptographic key exists in scope, the requirements in this decision tree do not apply."
+      ]
+    }
+  ]
+  },
+  "CRY-1": {
+  "status": "COMPLETED",
+  "final_verdict": "NOT APPLICABLE",
+  "num_nodes_evaluated": 0,
+  "path_taken": [
+    {
+      "node_type": "action",
+      "node_text": "For each security and network asset",
+      "applicability": "APPLICABLE",
+      "reasoning": [
+        "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents the existence of network-related assets within the scope of this requirement."
+      ]
+    },
+    {
+      "node_type": "decision",
+      "node_text": "Does the equipment use cryptography for the protection of the security or network asset?",
+      "evaluation": {
+        "response": "NO",
+        "reasoning": [
+          "The documentation does not describe the use of cryptography for protecting security or network assets. While general references to \"robust security protocols\" are made, no explicit cryptographic mechanisms, algorithms, key usage, or cryptographic protections applied to assets are documented. In the absence of explicit evidence that cryptography is used for asset protection, this requirement does not apply."
+        ]
+      }
+    }
+  ]
+  },
+  "GEC-7": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 3,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each external interface",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents the presence of an external Wi-Fi interface, which is an external interface within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the interface capable of receiving input?",
+        "evaluation": {
+          "response": "YES",
+          "reasoning": [
+            "\"Created for the Internet of Things (IoT), the SimpleLink™ Wi-Fi CC3200 device is a wireless MCU.\" A wireless network interface necessarily receives input data over the network, establishing that the interface is capable of receiving input."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is this a user interface?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The Wi-Fi network interface is described as a wireless communication interface for IoT connectivity. The documentation does not describe it as a human-facing user interface intended for direct user interaction."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the intended use and functionality of the interface documented including any relevant input data types, APIs, protocols, file formats, etc.?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe the intended use and functionality of the Wi-Fi interface in terms of supported input data types, APIs, protocols, file formats, or interface specifications. No explicit interface documentation detailing accepted inputs is provided."
+          ]
+        }
+      }
+    ]
+  },
+  "NMM-1": {
+    "status": "COMPLETED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "decision",
+        "node_text": "Is the equipment a Network Equipment?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "\"The CC3200 LaunchPad development kit is a low-cost evaluation platform for Arm Cortex-M4F-based microcontrollers.\" The documentation describes the equipment as a microcontroller development and evaluation platform, not as network equipment whose primary function is to provide networking services or infrastructure. Therefore, it is not network equipment within the scope of this requirement."
+          ]
+        }
+      }
+    ]
+  },
+  "RLM-1": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 3,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each network interface",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents the presence of a network interface, placing it within the scope of this requirement."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the network interface intended to be used to communicate with other equipment in a local network only?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "\"Created for the Internet of Things (IoT), the SimpleLink™ Wi-Fi CC3200 device is a wireless MCU.\" The documentation describes use in IoT contexts and does not state that communication is limited to a local network only. Therefore, local-only use cannot be concluded."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Does equipment in the network provide sufficient protection against loss of function of the equipment?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any assumptions, guarantees, or protections provided by other equipment in the network to prevent loss of function. No external network-level resilience or protection is explicitly stated."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Does the equipment use resilience mechanisms to mitigate the effects of DoS attacks on the network interfaces and return to a defined state after attack?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any resilience mechanisms such as rate limiting, traffic filtering, overload handling, recovery procedures, or defined post-attack states for mitigating Denial-of-Service attacks on the network interface. In the absence of explicit evidence of such mechanisms, this requirement is not met."
+          ]
+        }
+      }
+    ]
+  },
+  "SCM-1": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 3,
+    "path_taken": [
+      {
+        "node_type": "decision",
+        "node_text": "Are security assets or network assets communicated over any network interface?",
+        "evaluation": {
+          "response": "YES",
+          "reasoning": [
+            "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents network communication capability, which implies that network assets and associated security-relevant data are communicated over a network interface."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Are the assets secured while communicated over the interface?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any mechanisms that secure assets while they are communicated over the network interface. While general references to \"robust security protocols\" are made, no explicit description of encryption, secure channels, key management, or other protections applied during communication is provided."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the communication mechanism required to communicate with legacy networks or devices?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not state that the communication mechanism is required to support or interoperate with legacy networks or legacy devices. No such requirement or dependency is explicitly described."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the communication of assets protected by the environment providing physical or logical protection?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any physical or logical environmental protections that secure the communication of assets over the network interface. No trusted, isolated, or protected operational environment is explicitly stated."
+          ]
+        }
+      }
+    ]
+  },
+  "SCM-2": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 0,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each secure communication mechanism",
+        "applicability": "NOT_APPLICABLE",
+        "reasoning": [
+          "The documentation does not describe any secure communication mechanism. There are no verbatim references to secure communication sessions, encrypted channels, authenticated communication, TLS, DTLS, IPsec, or similar mechanisms providing integrity and authenticity protection for communicated assets. Because no secure communication mechanism is explicitly documented, this requirement does not apply."
+        ]
+      }
+    ]
+  },
+  "SCM-3": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 0,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each secure communication mechanism",
+        "applicability": "NOT_APPLICABLE",
+        "reasoning": [
+          "The documentation does not explicitly describe any secure communication mechanism. There are no verbatim references to secure communication sessions, encrypted channels, confidentiality-protected communication, TLS, DTLS, IPsec, or similar mechanisms used to protect the confidentiality of assets during communication. Because no secure communication mechanism is documented, this requirement does not apply."
+        ]
+      }
+    ]
+  },
+  "SCM-4": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 0,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each secure communication mechanism",
+        "applicability": "NOT_APPLICABLE",
+        "reasoning": [
+          "The documentation does not explicitly describe any secure communication mechanism. There are no verbatim references to secure communication sessions, encrypted channels, authenticated or integrity-protected communication, or similar mechanisms used for transferring assets. Because no secure communication mechanism is documented, the conditions required to evaluate replay attack risks do not exist, and this requirement does not apply."
+        ]
+      }
+    ]
+  },
+  "SSM-1": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "decision",
+        "node_text": "Are network assets or security assets stored on the equipment?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not explicitly state that network assets or security assets are stored on the equipment. While software resources and firmware are referenced, there are no verbatim statements indicating that security assets (such as credentials, keys, certificates, or protected configuration data) or network assets are stored on the device. In the absence of explicit documentation that such assets are stored on the equipment, this requirement does not apply."
+          ]
+        }
+      }
+    ]
+  },
+  "SSM-2": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 0,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each secure storage mechanism",
+        "applicability": "NOT_APPLICABLE",
+        "reasoning": [
+          "The documentation does not describe any secure storage mechanism. There are no verbatim references to secure storage, protected storage, integrity-protected storage, secure elements, or similar mechanisms used to store security or network assets. Because no secure storage mechanism is documented, this requirement does not apply."
+        ]
+      }
+    ]
+  },
+  "SSM-3": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 0,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each secure storage mechanism",
+        "applicability": "NOT_APPLICABLE",
+        "reasoning": [
+          "The documentation does not describe any secure storage mechanism. There are no verbatim references to secure storage, confidentiality-protected storage, secure elements, encrypted storage, or similar mechanisms used to store security or network assets. Because no secure storage mechanism is documented, this requirement does not apply."
+        ]
+      }
+    ]
+  },
+  "SUM-1": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 4,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each part of the equipment's software",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"All design files including firmware patches, software example projects, and documentation are made available from the SimpleLink™ Wi-Fi platform.\" This explicitly documents the existence of software parts (firmware and software components) associated with the equipment."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>software part property :</b> Does the part of the software affect security and/or network assets?",
+        "evaluation": {
+          "response": "YES",
+          "reasoning": [
+            "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" The documentation explicitly states that the equipment provides Wi-Fi network functionality. Software that is part of the equipment and associated with this functionality therefore affects network and associated security assets."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Do functional safety implications prohibit updatability?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not state that functional safety implications prohibit updating the software. No claims are made that software updates are restricted or disallowed due to functional safety requirements."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Is the software immutable for security reasons?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe the software as immutable for security reasons. References to firmware patches and software resources indicate that software modification or replacement is possible."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "Do alternative measures exist that protect security assets and/or network assets during the entire lifecycle?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not describe any alternative lifecycle measures that protect security or network assets in lieu of software updates. No compensating controls or lifecycle protections are explicitly stated."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>software part property :</b> Does the equipment provide at least one update mechanism for updating the part of the software?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation references the availability of firmware patches and software resources but does not explicitly describe an update mechanism provided by the equipment itself for updating deployed software. No update process, interface, or mechanism is explicitly documented."
+          ]
+        }
+      }
+    ]
+  },
+  "SUM-2": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "action",
+        "node_text": "For each update mechanism for parts of the software affecting security and/or network assets",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"It also contains the flash programmer, a command line tool for flashing software, configuring network and software parameters (SSID, access point channel, network profile, etc.).\" This explicitly documents the existence of a software update mechanism used to install or update software parts that affect network and security assets."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>update mechanism property :</b> Does the update mechanism only install software whose integrity and authenticity is validated?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation describes a flash programmer and command line tool for flashing software but does not state that the integrity and authenticity of the software being installed are validated. There are no verbatim references to signature verification, cryptographic authentication, integrity checks, or trusted update validation performed by the update mechanism. In the absence of explicit evidence that only integrity- and authenticity-validated software can be installed, this requirement is not met."
+          ]
+        }
+      }
+    ]
+  },
+  "SUM-3": {
+    "status": "COMPLETED",
+    "final_verdict": "FAIL",
+    "num_nodes_evaluated": 3,
+    "path_taken": [
+      {
+        "node_type": "decision",
+        "node_text": "<b>Equipment property :</b> Does the equipment have a network interface that allows transferring an update?",
+        "evaluation": {
+          "response": "YES",
+          "reasoning": [
+            "\"The high-performance CC3200 is the industry's first single-chip microcontroller (MCU) with built-in Wi-Fi® connectivity.\" This explicitly documents that the equipment includes a network interface capable of transferring data.",
+            "\"It also contains the flash programmer, a command line tool for flashing software.\" The documentation explicitly describes the transfer of software images for updating the equipment. Taken together, the documented network interface and the documented software update process establish that the equipment has a network interface capable of transferring update data."
+          ]
+        }
+      },
+      {
+        "node_type": "action",
+        "node_text": "For each updatable part of the software affecting security and/or network assets",
+        "applicability": "APPLICABLE",
+        "reasoning": [
+          "\"The SimpleLink™ Wi-Fi® CC3200 SDK contains drivers for the CC3200 programmable MCU, sample applications, and system and user files (certificates, web pages, etc.).\" The documentation explicitly describes software parts that affect network and security assets and that are subject to update."
+        ]
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Functional safety implications :</b> Are there functional safety implications that do not allow the automation of updating this part of the software?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation does not state that functional safety implications prohibit automated updating of software. No restrictions on update automation due to functional safety are explicitly documented."
+          ]
+        }
+      },
+      {
+        "node_type": "decision",
+        "node_text": "<b>Update mechanism property :</b> Is there at least one update mechanism for the software that is capable of updating the part of software without human intervention at the equipment, or via scheduling or triggering the installation of an update under user approval?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "The documentation describes a flash programmer and command line tool for flashing software, but does not describe any update mechanism that operates without human intervention at the equipment, nor any mechanism that supports scheduled updates or user-approved installation prompts. No such automated or semi-automated update capabilities are explicitly documented."
+          ]
+        }
+      }
+    ]
+  },
+  "TCM-1": {
+    "status": "STOPPED",
+    "final_verdict": "NOT APPLICABLE",
+    "num_nodes_evaluated": 1,
+    "path_taken": [
+      {
+        "node_type": "decision",
+        "node_text": "Is the equipment a Network Equipment?",
+        "evaluation": {
+          "response": "NO",
+          "reasoning": [
+            "\"The CC3200 LaunchPad development kit is a low-cost evaluation platform for Arm Cortex-M4F-based microcontrollers.\" The documentation describes the equipment as an embedded microcontroller development and evaluation platform, not as network equipment whose primary intended function is to connect, route, switch, or manage network traffic for other devices. Therefore, it is not Network Equipment as defined for this requirement. :contentReference[oaicite:0]{index=0}"
+          ]
+        }
+      }
+    ]
+  }
+}
